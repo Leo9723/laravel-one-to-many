@@ -29,3 +29,27 @@ deleteButton.forEach((button) =>{
 
     });
 });
+
+const deleteType = document.querySelectorAll('.confirm-delete-type[type="submit"]');
+
+deleteButton.forEach((button) =>{
+    button.addEventListener('click', function(event){
+        event.preventDefault();
+
+        const typeName = button.getAttribute('data-title');
+
+        const modal = document.getElementById('delete-type');
+
+        const bootstrapModal = new bootstrap.Modal(modal);
+        bootstrapModal.show();
+
+        const modalName = modal.querySelector('#modal-name');
+        modalName.textContent = typeName;
+
+        const deleteButton = modal.querySelector('#confirm-delete');
+        deleteButton.addEventListener('click', () =>{
+                button.parentElement.submit();
+        });
+
+    });
+});

@@ -14,6 +14,7 @@
       <th scope="col">ID</th>
       <th scope="col">Nome</th>
       <th scope="col">Slug</th>
+      <th scope="col">Azioni</th>
     </tr>
   </thead>
   <tbody>
@@ -28,7 +29,7 @@
         <form action="{{ route('admin.types.destroy', ['type' => $type->id]) }}" method="POST">
                @csrf
                @method('DELETE')
-               <button type="submit" class="confirm-delete-type btn btn-danger" data-title="{{ $type->title }}" data-bs-toggle="modal" data-bs-target="#delete-modal-project" data-projectid="{{ $project->id }}"><i class="fa-solid fa-trash-can"></i></button>
+               <button type="submit" class="confirm-delete-type btn btn-danger" data-name="{{ $type->name }}" data-bs-toggle="modal" data-bs-target="#delete-modal-type" data-projectid="{{ $type->id }}"><i class="fa-solid fa-trash-can"></i></button>
             </form>
       </td>
     </tr>

@@ -24,6 +24,16 @@
     </div>
         @enderror
     </div>
+
+    <label for="title">Inserisci lo slug della Tipologia:</label><br>
+    <input type="text" name="slug" id="slug"><br>
+    <div class="error">
+    @error('slug')
+    <div class="text-danger">
+        {{ $message }}
+    </div>
+        @enderror
+    </div>
     
     <input type="submit" value="Invia" class="sub">
     

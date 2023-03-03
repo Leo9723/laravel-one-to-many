@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
+
 
 class TypeController extends Controller
 {
@@ -38,7 +40,7 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-        $form_data = $request->validated();
+        $form_data = $request->all();
 
 
 
