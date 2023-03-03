@@ -106,7 +106,6 @@ class TypeController extends Controller
      */
     public function destroy(Type $type)
     {
-        $type = Type::find($type);
 
         $type->delete();
         return redirect()->route('admin.types.index')->with('message', 'Tipologia cancellata correttamente');

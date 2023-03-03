@@ -32,7 +32,7 @@ deleteButton.forEach((button) =>{
 
 const deleteType = document.querySelectorAll('.confirm-delete-type[type="submit"]');
 
-deleteButton.forEach((button) =>{
+deleteType.forEach((button) =>{
     button.addEventListener('click', function(event){
         event.preventDefault();
 
