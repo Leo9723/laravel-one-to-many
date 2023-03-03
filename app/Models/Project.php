@@ -10,7 +10,7 @@ use App\Models\Category;
 
 class Project extends Model
 {
-    protected $fillable = ['title', 'description', 'types_id'];
+    protected $fillable = ['title', 'description', 'type_id'];
     use HasFactory;
     public function type(): BelongsTo {
         return $this->belongsTo(Type::class);

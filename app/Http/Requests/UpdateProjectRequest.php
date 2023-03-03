@@ -27,7 +27,7 @@ class UpdateProjectRequest extends FormRequest
             'title' => ['required', 'max:30'],
             'description' => ['required', 'max:200'],
             'category_id' => ['nullable', 'exists:types,id'],
-            'types_id' => ['nullable', 'exists:types,id']
+            'type_id' => ['nullable', 'exists:types,id']
         ];
     }
     public function messages()

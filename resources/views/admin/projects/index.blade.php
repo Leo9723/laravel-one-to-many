@@ -22,7 +22,7 @@
     <tr>
       <td>{{ $project['title'] }}</td>
       <td>{{ $project['description'] }}</td>
-      <td>{{ $project['types_id'] }}</td>
+      <td>{{ $project['type_id'] }}</td>
       <td>
         <button class="btn btn-success"><a href="{{ route('admin.projects.show', ['project' => $project->id]) }}"><i class="fa-solid fa-eye"></i></a></button>
         <button class="btn btn-warning"><a href="{{ route('admin.projects.edit', ['project' => $project->id]) }}"><i class="fa-solid fa-pencil"></i></a></button>
